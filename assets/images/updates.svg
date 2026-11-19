@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 240" width="400" height="240" role="img" aria-label="A circular update arrow around a gear">
+  <rect width="400" height="240" fill="#0b1f3a"/>
+  <circle cx="340" cy="40" r="90" fill="#12b5a6" opacity="0.18"/>
+  <circle cx="50" cy="210" r="70" fill="#12b5a6" opacity="0.12"/>
+  <circle cx="200" cy="120" r="46" fill="none" stroke="#eef3f8" stroke-width="12" stroke-dasharray="230 60"/><polygon points="244,66 270,96 232,100" fill="#eef3f8"/><circle cx="200" cy="120" r="22" fill="#12b5a6"/><circle cx="200" cy="120" r="8" fill="#0b1f3a"/>
+</svg>

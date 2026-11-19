@@ -1,0 +1,235 @@
+/*
+  Name: Trisha ______   Student ID: ______   Team #: ____
+
+  Colours (only these are used):
+    #0b1f3a  deep navy   - header, nav, headings, footer
+    #12b5a6  bright teal - accents, links, card top border
+    #eef3f8  pale blue   - page background
+    #ffffff  white       - cards and light text
+    #ffb703  amber       - number badges
+
+  Fonts: Poppins (headings), Open Sans (body text)
+*/
+
+/* Reset: removes default browser spacing so my own spacing is predictable */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Body: sets the body font, dark navy text and the pale page background. */
+body {
+  font-family: "Open Sans", Arial, sans-serif;
+  line-height: 1.6;
+  color: #0b1f3a;
+  background: #eef3f8;
+}
+
+/* PAGE GRID: one container with 2 columns (200px nav + the rest) and 3 rows.
+   gap puts 16px between the regions. */
+.page {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  grid-template-rows: auto 1fr auto;
+  gap: 16px;
+  max-width: 1200px;
+  min-height: 100vh;
+  margin: 0 auto;
+  padding: 0 16px 16px;
+}
+
+/* Header: spans both columns on row 1 and sticks to the top while scrolling.
+   The gradient is one of my finishing touches. */
+header {
+  grid-column: 1 / -1;
+  grid-row: 1;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  padding: 24px;
+  border-radius: 0 0 12px 12px;
+  color: #ffffff;
+  background: linear-gradient(135deg, #0b1f3a, #12b5a6);
+}
+
+/* Header heading: a big white Poppins title on the dark gradient. */
+header h1 {
+  font-family: "Poppins", Arial, sans-serif;
+  font-size: 1.8rem;
+  line-height: 1.2;
+}
+
+/* Header subtitle: a small gap above it keeps it close to the title. */
+header p {
+  margin-top: 4px;
+}
+
+/* Nav: sits in column 1 of row 2 (left side). A grid with one column
+   stacks the links vertically with a gap between them. */
+nav {
+  grid-column: 1;
+  grid-row: 2;
+  display: grid;
+  align-content: start;
+  gap: 8px;
+  padding: 16px;
+  border-radius: 12px;
+  background: #0b1f3a;
+}
+
+/* Nav links: white text on navy, padded so they are easy to click. */
+nav a {
+  display: block;
+  padding: 10px 12px;
+  border-radius: 8px;
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+/* Nav hover: the link turns teal with navy text so you can see where you point. */
+nav a:hover {
+  background: #12b5a6;
+  color: #0b1f3a;
+}
+
+/* Main: sits in column 2 of row 2 (right of the nav). It is a grid too,
+   so the sections inside are spaced with gap. */
+main {
+  grid-column: 2;
+  grid-row: 2;
+  display: grid;
+  align-content: start;
+  gap: 24px;
+}
+
+/* PROXIMITY: each group is its own white panel with only 8px between a heading
+   and its text, while the main grid leaves 24px between the different groups. */
+main section {
+  display: grid;
+  gap: 8px;
+  padding: 24px;
+  border-radius: 12px;
+  background: #ffffff;
+}
+
+/* CONTRAST: big bold navy Poppins headings on white panels look clearly
+   different from the smaller Open Sans paragraphs. */
+main h2,
+.card h3 {
+  font-family: "Poppins", Arial, sans-serif;
+  color: #0b1f3a;
+  line-height: 1.3;
+}
+
+/* Section heading size: larger than the card headings below. */
+main h2 {
+  font-size: 1.4rem;
+}
+
+/* CARD GRID: auto-fit puts as many cards in a row as will fit, and each card
+   is at least 200px wide. The cards share leftover space equally.
+   If I change 200px to 300px, the cards must be wider, so fewer fit in a row
+   and they wrap to the next row sooner (for example 2 per row instead of 4). */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
+}
+
+/* REPETITION: all four cards use this one rule, so they share the same colours,
+   spacing, teal top border, rounded corners and soft shadow (finishing touch one). */
+.card {
+  position: relative;
+  display: grid;
+  align-content: start;
+  gap: 8px;
+  padding: 0 0 16px;
+  border-top: 4px solid #12b5a6;
+  border-radius: 12px;
+  overflow: hidden;
+  background: #ffffff;
+  box-shadow: 0 4px 12px rgba(11, 31, 58, 0.18);
+  transition: transform 0.2s;
+}
+
+/* Card hover: the card grows a little when the mouse is over it (finishing touch two). */
+.card:hover {
+  transform: scale(1.04);
+}
+
+/* ALIGNMENT: the image fills the full card width so every card image starts
+   and ends on the same edges. */
+.card img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* Card heading and text: the same 16px side padding so the text lines up
+   under the image, and the heading stays close to its sentence. */
+.card h3,
+.card p {
+  padding: 0 16px;
+}
+
+/* Card heading size: smaller than the section headings but still bold. */
+.card h3 {
+  font-size: 1.1rem;
+}
+
+/* Badge: a small amber number in the top-left corner of each card. */
+.badge {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  display: grid;
+  place-items: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: #ffb703;
+  color: #0b1f3a;
+  font-family: "Poppins", Arial, sans-serif;
+  font-weight: 700;
+}
+
+/* Quick tip panel: a teal left bar so it stands apart from the other panels. */
+.tip {
+  border-left: 8px solid #12b5a6;
+}
+
+/* Footer: spans both columns on the last row, navy with white text like the nav. */
+footer {
+  grid-column: 1 / -1;
+  grid-row: 3;
+  padding: 16px 24px;
+  border-radius: 12px;
+  background: #0b1f3a;
+  color: #ffffff;
+  text-align: center;
+}
+
+/* Footer link: teal on navy so it still reads clearly. */
+footer a {
+  color: #12b5a6;
+}
+
+/* Small screens: switch to one column and put the regions in a single stack. */
+@media (max-width: 700px) {
+  /* Page grid on small screens: a single column so everything stacks. */
+  .page {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+  }
+
+  /* Regions on small screens: all use column 1 and flow one under another. */
+  header,
+  nav,
+  main,
+  footer {
+    grid-column: 1;
+    grid-row: auto;
+  }
+}

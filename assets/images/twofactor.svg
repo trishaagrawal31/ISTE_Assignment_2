@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 240" width="400" height="240" role="img" aria-label="A phone showing a six digit code and a shield">
+  <rect width="400" height="240" fill="#0b1f3a"/>
+  <circle cx="340" cy="40" r="90" fill="#12b5a6" opacity="0.18"/>
+  <circle cx="50" cy="210" r="70" fill="#12b5a6" opacity="0.12"/>
+  <rect x="140" y="30" width="120" height="180" rx="18" fill="#eef3f8"/><rect x="152" y="52" width="96" height="120" rx="8" fill="#0b1f3a"/><text x="200" y="122" font-family="monospace" font-size="22" fill="#12b5a6" text-anchor="middle">482 913</text><circle cx="200" cy="190" r="8" fill="#0b1f3a"/><path d="M310 70 l40 14 v34 c0 26 -18 42 -40 52 c-22 -10 -40 -26 -40 -52 v-34z" fill="#12b5a6"/><path d="M294 118 l12 12 l22 -24" stroke="#0b1f3a" stroke-width="7" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
