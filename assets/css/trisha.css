@@ -1,11 +1,12 @@
 /*
-  Name: Trisha ______   Student ID: ______   Team #: ____
+  Name: Trisha Agrawal   Student ID: 753005593   Team #: 1
 
   Colours (only these are used):
     #0b1f3a  deep navy   - header, nav, headings, footer
-    #12b5a6  bright teal - accents, links, card top border
-    #eef3f8  pale blue   - page background
-    #ffffff  white       - cards and light text
+    #12b5a6  bright teal - navigation hover and footer link
+    #eef3f8  pale blue   - page and card backgrounds
+    #ffffff  white       - content panels
+    #fff4d6  warm cream  - quick tip panel
 
   Fonts: Georgia (headings), Verdana (body text)
 */
@@ -24,24 +25,24 @@ body {
   background: #eef3f8;
 }
 
-/* PAGE GRID: one container with 2 columns (200px nav + the rest) and 3 rows.
-   gap puts 16px between the regions. */
+/* PAGE GRID: a compact side navigation sits beside the page content. */
 .page {
   display: grid;
-  grid-template-columns: 200px 1fr;
+  grid-template-columns: 180px 1fr;
   grid-template-rows: auto 1fr auto;
-  gap: 16px;
+  gap: 14px;
   max-width: 1200px;
   min-height: 100vh;
   margin: 0 auto;
-  padding: 0 16px 16px;
+  padding: 0 8px 12px;
 }
 
 /* Header: spans both columns on row 1. */
 header {
   grid-column: 1 / -1;
   grid-row: 1;
-  padding: 24px;
+  padding: 20px;
+  border-radius: 8px;
   color: #ffffff;
   background: #0b1f3a;
 }
@@ -64,9 +65,9 @@ nav {
   grid-row: 2;
   display: grid;
   align-content: start;
-  gap: 8px;
-  padding: 16px;
-  border-radius: 12px;
+  gap: 6px;
+  padding: 10px;
+  border-radius: 8px;
   background: #0b1f3a;
 }
 
@@ -92,16 +93,15 @@ main {
   grid-row: 2;
   display: grid;
   align-content: start;
-  gap: 24px;
+  gap: 14px;
 }
 
-/* PROXIMITY: each group is its own white panel with only 8px between a heading
-   and its text, while the main grid leaves 24px between the different groups. */
+/* PROXIMITY: each group is a white panel with compact spacing inside. */
 main section {
   display: grid;
   gap: 8px;
-  padding: 24px;
-  border-radius: 12px;
+  padding: 18px;
+  border-radius: 8px;
   background: #ffffff;
 }
 
@@ -125,7 +125,7 @@ main h2 {
 .cards {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 16px;
+  gap: 12px;
 }
 
 /* REPETITION: all four cards use this one rule, so they share the same colours,
@@ -134,10 +134,10 @@ main h2 {
   display: grid;
   align-content: start;
   gap: 8px;
-  padding: 0 0 16px;
-  border-radius: 12px;
+  padding: 0 0 12px;
+  border-radius: 8px;
   overflow: hidden;
-  background: #ffffff;
+  background: #eef3f8;
 }
 
 /* ALIGNMENT: the image fills the full card width so every card image starts
@@ -152,7 +152,7 @@ main h2 {
    under the image, and the heading stays close to its sentence. */
 .card h3,
 .card p {
-  padding: 0 16px;
+  padding: 0 12px;
 }
 
 /* Card heading size: smaller than the section headings but still bold. */
@@ -160,12 +160,17 @@ main h2 {
   font-size: 1.1rem;
 }
 
+/* CONTRAST: the warm panel makes the quick tip easy to distinguish. */
+main section.tip {
+  background: #fff4d6;
+}
+
 /* Footer: spans both columns on the last row, navy with white text like the nav. */
 footer {
   grid-column: 1 / -1;
   grid-row: 3;
   padding: 16px 24px;
-  border-radius: 12px;
+  border-radius: 8px;
   background: #0b1f3a;
   color: #ffffff;
   text-align: center;
