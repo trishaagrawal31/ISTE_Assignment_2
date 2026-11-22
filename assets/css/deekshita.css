@@ -12,94 +12,155 @@
    ========================================================================== */
 
 html {
-    color: #222;
-    font-size: 1em;
-    line-height: 1.4;
+  color: #222;
+  font-size: 1em;
+  line-height: 1.4;
 }
 
 body {
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    grid-template-rows: 1fr 0.5fr 7fr 0.5fr;
-    gap: 20px;
-    min-height: 100vh;
-    box-sizing: border-box; /*padding wont cause scrolling*/
-    border: 2px solid red;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: auto auto auto auto;
+  gap: 20px;
+  min-height: 100vh;
+  box-sizing: border-box; /*padding wont cause scrolling*/
 
-    /* margin:0;  yes or no?? */
+  /* margin:0;  yes or no?? */
+  /*background styling*/
+  background: rebeccapurple;
+
+  font-family: 'Fredoka', sans-serif;
+  font-weight: 700; /* Makes it thick and chunky */
+  color: black;
 }
 
 .header{
-    grid-column: span 2;
-    grid-row: 1;
+  grid-column: span 2;
+  grid-row: 1;
 
-    /*separate grid inside*/
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-    border: 2px solid blue;
-    padding: 10px;
-
+  /*separate grid inside*/
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  border: 2px solid blue;
+  padding: 10px;
+  border-radius: 15px;
+  background-color: rgba(255, 255, 255, 0.85); /* ADDED */
 }
 
 .navbar{
-    grid-column: span 2;
-    grid-row: 2;
-    border: 2px solid green;
+  grid-column: span 2;
+  grid-row: 2;
+  border: 2px solid green;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  align-items: center;
+  justify-items: center; /* change to make it evenly spaced*/
+  /*padding: 0;*/
+  background:rgba(255, 255, 255, 0.85);
+  border-radius: 15px;
+  padding: 20px;
 }
 
-.navbar ul{
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-    align-items: center;
-    justify-items: center; /* change to make it evenly spaced*/
-    /*padding: 0;*/
-}
 
 .main {
-    padding: 10px;
-    grid-row: 3;
-    grid-column: 1;
-    display: grid;
-    grid-template-rows: 1fr 1fr;
-    border: 2px solid yellow;
-    gap: 5px;
-
+  padding: 10px;
+  grid-row: 3;
+  grid-column: 1;
+  display: grid;
+  grid-template-rows: auto auto;
+  gap: 5px;
+  border-radius: 15px;
+  background-color: rgba(255, 255, 255, 0.85); /* ADDED */
 }
 
 #content {
-    grid-row: 1;
-    border: 2px solid pink;
-
+  grid-row: 1;
+  border-radius: 15px;
+  padding: 20px;
 }
 
 .cards{
-    grid-row: 2;
-    display: grid;
-    grid-template-columns: repeat(2, minmax(200px, 1fr));
-    gap: 18px;
-    border: 2px solid silver;
-    /*grid-template-rows: 1fr 2fr;*/
-
+  grid-row: 2;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(200px, 1fr));
+  gap: 18px;
+  /*grid-template-rows: 1fr 2fr;*/
+  border-radius: 15px;
 }
 .singleCard{
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    border: 2px solid black;
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  border: 2px solid black;
+  padding: 10px;
+  gap: 10px;
+  margin: 18px;
+  align-items: center;
+  justify-items: center;
+  background-color: rgba(255, 255, 255, 0.85);
+  border-radius: 15px;
+}
 
+
+.cardImg img{
+  width: 100%; /*fills witdh*/
+  max-width: 100%; /*stops overflow*/
+  height: auto;
+  border-radius: 0; /* Ensures images stay square */
 }
 
 .sidebar{
-    grid-column: 2;
-    grid-row: 3;
-    border: 2px solid orange;
+  grid-column: 2;
+  grid-row: 3;
+  border: 2px solid orange;
+
+  display: grid;
+  grid-template-rows: 0.5fr 2fr 2fr 2fr;
+  gap: 10px;
+  align-items: center;
+  justify-items: center;
+  border-radius: 15px;
+  background-color: rgba(255, 255, 255, 0.85); /* ADDED */
+  margin-bottom: auto;
 }
 
+.video{
+  width: 90%;
+  height: 300px;
+  border: none;
+  margin: 10px;
+  border-radius: 5px;
+}
+
+
 .footer{
-    grid-column: span 2;
-    grid-row: 4;
-    border: 2px solid brown;
+  grid-column: span 2;
+  grid-row: 4;
+  border: 2px solid brown;
+  border-radius: 15px;
+  background-color: rgba(255, 255, 255, 0.85); /* ADDED */
 }
 
 /*.header, .navbar, .main, .sidebar, .footer {
   border: 1px solid black;
 }*/
+
+
+h1 {
+  font-size: 2.5rem;
+}
+
+h2 {
+  font-size: 1.8rem;
+}
+
+#content p {
+  font-size: 1.2rem;
+}
+
+.singleCard h2 {
+  font-size: 1.4rem;
+}
+
+.singleCard p {
+  font-size: 1.1rem;
+}
