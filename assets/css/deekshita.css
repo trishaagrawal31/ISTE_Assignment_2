@@ -1,7 +1,9 @@
-/*   Deekshita Imandi - 750009525 */
+/*
+  Name: Deekshita Imandi
+  Student ID: 753005593 */
 
 html {
-  color: #222;
+  color: darkgrey;
   font-size: 1em;
   line-height: 1.4;
 }
@@ -20,6 +22,8 @@ body {
   padding: 20px;
 }
 
+/*CONTRAST: the hotpink gradient falls into the white background, providing high contrast for the text,logo, 
+and appropriately against the rest of the webpag*/
 .header {
   grid-column: span 2;
   grid-row: 1;
@@ -28,6 +32,7 @@ body {
   padding: 15px 20px;
   border-radius: 15px;
   background: linear-gradient(to right, hotpink 0%, white 80%);
+
   align-items: center;
   justify-items: center;
   box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.2); /* shadow */
@@ -41,6 +46,8 @@ body {
   grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
   align-items: center;
   justify-items: center;
+  /*REPETITION the white background, rounded corners, hotpink border and the shadow are repeated throughout the webpage 
+  for a consistent appearance. */
   background: white;
   border-radius: 15px;
   padding: 20px;
@@ -87,6 +94,7 @@ body {
   border-radius: 15px;
 }
 
+/* ALIGNMENT: All four cards use the same grid layout so images and text line up on each card. */
 .singleCard {
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(0, 1.4fr);
@@ -120,6 +128,8 @@ body {
   overflow-wrap: anywhere;
 }
 
+/*PROXIMITY: The sidebar groups related video content together with a 10px gap, so that the sidebar is visually distinct 
+from the main content. */
 .sidebar {
   min-width: 0;
   grid-column: 2;
