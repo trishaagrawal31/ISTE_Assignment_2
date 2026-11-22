@@ -30,11 +30,12 @@ body {
   display: grid;
   grid-template-columns: 180px 1fr;
   grid-template-rows: auto 1fr auto;
-  gap: 14px;
-  max-width: 1200px;
+  column-gap: 14px;
+  row-gap: 14px;
+  max-width: none;
   min-height: 100vh;
   margin: 0 auto;
-  padding: 0 8px 12px;
+  padding: 0;
 }
 
 /* Header: spans both columns on row 1. */
@@ -42,7 +43,6 @@ header {
   grid-column: 1 / -1;
   grid-row: 1;
   padding: 20px;
-  border-radius: 8px;
   color: #ffffff;
   background: #0b1f3a;
 }
@@ -67,7 +67,6 @@ nav {
   align-content: start;
   gap: 6px;
   padding: 10px;
-  border-radius: 8px;
   background: #0b1f3a;
 }
 
@@ -170,7 +169,6 @@ footer {
   grid-column: 1 / -1;
   grid-row: 3;
   padding: 16px 24px;
-  border-radius: 8px;
   background: #0b1f3a;
   color: #ffffff;
   text-align: center;
