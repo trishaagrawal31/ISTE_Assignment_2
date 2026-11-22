@@ -1,4 +1,4 @@
-/* Name: Trisha Agrawal   Student ID: 753005593   Team #: 1 */
+/* Name: Trisha Agrawal   Student ID: 753005593  */
 
 * {
   box-sizing: border-box;
@@ -58,10 +58,9 @@ nav {
   background: #173552;
   color: #ffffff;
   font-weight: 600;
-  text-decoration: none;
 }
 
-.nav-link:hover {
+.nav-link:hover{
   background: #244563;
 }
 
@@ -70,11 +69,10 @@ main {
   grid-row: 2;
   display: grid;
   align-content: start;
-  gap: 14px;
-}
+  gap: 14px;}
 
 /* PROXIMITY: compact white panels group related content. */
-.content-section {
+.content-section{
   display: grid;
   gap: 8px;
   padding: 18px;
@@ -83,8 +81,7 @@ main {
 }
 
 /* CONTRAST: dark Georgia headings stand out from gray body text. */
-h2,
-h3 {
+h2,h3{
   font-family: Georgia, "Times New Roman", serif;
   color: #000000;
 }
@@ -105,7 +102,7 @@ h2 {
 }
 
 /* REPETITION: all four cards share the same background and spacing. */
-.card {
+.card{
   display: grid;
   align-content: start;
   gap: 8px;
@@ -115,11 +112,11 @@ h2 {
   background: #eef3f8;
 }
 
-/* ALIGNMENT: card images fill the same width. */
+/* ALIGNMENT: equal image heights line up the card titles and text. */
 .card-image {
   display: block;
   width: 100%;
-  height: auto;
+  height: 240px;
 }
 
 .card-copy,
