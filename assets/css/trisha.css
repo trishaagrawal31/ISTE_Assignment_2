@@ -1,46 +1,30 @@
 /*
   Name: Trisha Agrawal   Student ID: 753005593   Team #: 1
 
-  Colours (only these are used):
-    #0b1f3a  deep navy   - header, nav, headings, footer
-    #12b5a6  bright teal - navigation hover and footer link
-    #eef3f8  pale blue   - page and card backgrounds
-    #ffffff  white       - content panels
-    #173552  slate blue  - navigation buttons
-    #244563  blue        - navigation button hover
-    #fff4d6  warm cream  - quick tip panel
 
-  Fonts: Georgia (headings), Verdana (body text)
 */
 
-/* Reset: removes default browser spacing so my own spacing is predictable */
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
-/* Body: sets the body font, dark navy text and the pale page background. */
 body {
   font-family: Verdana, Arial, sans-serif;
   color: #0b1f3a;
   background: #eef3f8;
 }
 
-/* PAGE GRID: a compact side navigation sits beside the page content. */
 .page {
   display: grid;
   grid-template-columns: 180px 1fr;
   grid-template-rows: auto 1fr auto;
   column-gap: 14px;
   row-gap: 14px;
-  max-width: none;
   min-height: 100vh;
-  margin: 0 auto;
-  padding: 0;
 }
 
-/* CONTRAST: the white title and teal subtitle stand out on the navy header. */
 header {
   grid-column: 1 / -1;
   grid-row: 1;
@@ -50,21 +34,16 @@ header {
   text-align: center;
 }
 
-/* CONTRAST: the large centered white title leads the smaller teal subtitle. */
-header h1 {
+.page-title {
   font-family: "Courier New", monospace;
   font-size: 2.8rem;
-  color: #ffffff;
 }
 
-/* Header subtitle: teal separates it from the main title. */
-header p {
+.page-subtitle {
   margin-top: 8px;
   color: #12b5a6;
 }
 
-/* Nav: sits in column 1 of row 2 (left side). A grid with one column
-   stacks the links vertically with a gap between them. */
 nav {
   grid-column: 1;
   grid-row: 2;
@@ -75,8 +54,7 @@ nav {
   background: #0b1f3a;
 }
 
-/* Nav links: colored backgrounds and teal edges make these look clickable. */
-nav a {
+.nav-link {
   display: block;
   padding: 10px 12px;
   border-left: 3px solid #12b5a6;
@@ -87,13 +65,10 @@ nav a {
   text-decoration: none;
 }
 
-/* Nav hover: a slight shift in blue highlights the selected link. */
-nav a:hover {
+.nav-link:hover {
   background: #244563;
 }
 
-/* Main: sits in column 2 of row 2 (right of the nav). It is a grid too,
-   so the sections inside are spaced with gap. */
 main {
   grid-column: 2;
   grid-row: 2;
@@ -102,8 +77,8 @@ main {
   gap: 14px;
 }
 
-/* PROXIMITY: each group is a white panel with compact spacing inside. */
-main section {
+/* PROXIMITY: compact white panels group related content. */
+.content-section {
   display: grid;
   gap: 8px;
   padding: 18px;
@@ -111,35 +86,29 @@ main section {
   background: #ffffff;
 }
 
-/* CONTRAST: big bold navy Georgia headings on white panels look clearly
-   different from the smaller Verdana paragraphs. */
-main h2,
-.card h3 {
+/* CONTRAST: dark Georgia headings stand out from gray body text. */
+h2,
+h3 {
   font-family: Georgia, "Times New Roman", serif;
   color: #000000;
 }
 
-main p {
-  color: #555555;
-}
-
-/* Section heading size: larger than the card headings below. */
-main h2 {
+h2 {
   font-size: 1.4rem;
 }
 
-/* CARD GRID: auto-fit puts as many cards in a row as will fit, and each card
-   is at least 200px wide. The cards share leftover space equally.
-   If I change 200px to 300px, the cards must be wider, so fewer fit in a row
-   and they wrap to the next row sooner (for example 2 per row instead of 4). */
+.body-copy {
+  color: #555555;
+}
+
+/* GRID: raising the 200px minimum to 300px makes cards wider, so fewer fit per row. */
 .cards {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 12px;
 }
 
-/* REPETITION: all four cards use this one rule, so they share the same colours,
-   spacing and rounded corners. */
+/* REPETITION: all four cards share the same background and spacing. */
 .card {
   display: grid;
   align-content: start;
@@ -150,32 +119,26 @@ main h2 {
   background: #eef3f8;
 }
 
-/* ALIGNMENT: the image fills the full card width so every card image starts
-   and ends on the same edges. */
-.card img {
+/* ALIGNMENT: card images fill the same width. */
+.card-image {
   display: block;
   width: 100%;
-  height: auto;
 }
 
-/* Card heading and text: the same 16px side padding so the text lines up
-   under the image, and the heading stays close to its sentence. */
-.card h3,
-.card p {
+.card-copy,
+h3 {
   padding: 0 12px;
 }
 
-/* Card heading size: smaller than the section headings but still bold. */
-.card h3 {
+h3 {
   font-size: 1.1rem;
 }
 
 /* CONTRAST: the warm panel makes the quick tip easy to distinguish. */
-main section.tip {
+.tip {
   background: #fff4d6;
 }
 
-/* Footer: spans both columns on the last row, navy with white text like the nav. */
 footer {
   grid-column: 1 / -1;
   grid-row: 3;
@@ -185,7 +148,6 @@ footer {
   text-align: center;
 }
 
-/* Footer link: teal on navy so it still reads clearly. */
-footer a {
+.footer-link {
   color: #12b5a6;
 }
