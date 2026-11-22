@@ -38,25 +38,27 @@ body {
   padding: 0;
 }
 
-/* Header: spans both columns on row 1. */
+/* CONTRAST: the white title and teal subtitle stand out on the navy header. */
 header {
   grid-column: 1 / -1;
   grid-row: 1;
-  padding: 20px;
+  padding: 24px;
   color: #ffffff;
   background: #0b1f3a;
+  text-align: center;
 }
 
-/* Header title: large white Georgia text on the deep navy background. */
+/* CONTRAST: the large centered white title leads the smaller teal subtitle. */
 header h1 {
-  font-family: Georgia, "Times New Roman", serif;
-  font-size: 2.2rem;
+  font-family: "Courier New", monospace;
+  font-size: 2.8rem;
   color: #ffffff;
 }
 
-/* Header subtitle: a small gap above it keeps it close to the title. */
+/* Header subtitle: teal separates it from the main title. */
 header p {
-  margin-top: 4px;
+  margin-top: 8px;
+  color: #12b5a6;
 }
 
 /* Nav: sits in column 1 of row 2 (left side). A grid with one column
