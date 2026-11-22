@@ -1,0 +1,105 @@
+/*! HTML5 Boilerplate v9.0.1 | MIT License | https://html5boilerplate.com/ */
+
+/* main.css 3.0.0 | MIT License | https://github.com/h5bp/main.css#readme */
+/*
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+html {
+    color: #222;
+    font-size: 1em;
+    line-height: 1.4;
+}
+
+body {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 1fr 0.5fr 7fr 0.5fr;
+    gap: 20px;
+    min-height: 100vh;
+    box-sizing: border-box; /*padding wont cause scrolling*/
+    border: 2px solid red;
+
+    /* margin:0;  yes or no?? */
+}
+
+.header{
+    grid-column: span 2;
+    grid-row: 1;
+
+    /*separate grid inside*/
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    border: 2px solid blue;
+    padding: 10px;
+
+}
+
+.navbar{
+    grid-column: span 2;
+    grid-row: 2;
+    border: 2px solid green;
+}
+
+.navbar ul{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    align-items: center;
+    justify-items: center; /* change to make it evenly spaced*/
+    /*padding: 0;*/
+}
+
+.main {
+    padding: 10px;
+    grid-row: 3;
+    grid-column: 1;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    border: 2px solid yellow;
+    gap: 5px;
+
+}
+
+#content {
+    grid-row: 1;
+    border: 2px solid pink;
+
+}
+
+.cards{
+    grid-row: 2;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(200px, 1fr));
+    gap: 18px;
+    border: 2px solid silver;
+    /*grid-template-rows: 1fr 2fr;*/
+
+}
+.singleCard{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    border: 2px solid black;
+
+}
+
+.sidebar{
+    grid-column: 2;
+    grid-row: 3;
+    border: 2px solid orange;
+}
+
+.footer{
+    grid-column: span 2;
+    grid-row: 4;
+    border: 2px solid brown;
+}
+
+/*.header, .navbar, .main, .sidebar, .footer {
+  border: 1px solid black;
+}*/
