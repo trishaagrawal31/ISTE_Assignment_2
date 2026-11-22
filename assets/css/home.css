@@ -187,3 +187,211 @@ figcaption {
     font-family: "Lucida Console", Monaco, monospace;
     font-weight: 500;
 }
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Trebuchet MS", Tahoma, sans-serif;
+}
+
+body {
+    display: grid;
+    grid-template-columns: minmax(200px, 1fr) 7fr;
+    grid-template-rows: auto 1fr auto;
+    gap: 15px;
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #14123a;
+    background: linear-gradient(#ece6fb, #c9b8ee);
+}
+
+h1,
+h2 {
+    font-variant: small-caps;
+    font-weight: 800;
+}
+
+#site_header {
+    grid-column: 1 / 3;
+    grid-row: 1;
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+    column-gap: 1rem;
+    padding: 1rem 1.5rem;
+    background: linear-gradient(to left, #5b3fa0, #14123a);
+    color: #5ee6f2;
+}
+
+.brand {
+    grid-column: 1;
+    grid-row: 1;
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: 20px auto;
+    justify-content: start;
+    gap: 10px;
+}
+
+.brand img {
+    grid-column: 1;
+    grid-row: 1;
+    width: 50px;
+    height: 50px;
+}
+
+.site_name {
+    grid-column: 2;
+    grid-row: 1;
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: 0.05em;
+    color: palegoldenrod;
+}
+
+.tagline {
+    grid-column: 2;
+    grid-row: 2;
+    color: #5ee6f2;
+    font-family: "Lucida Console", Monaco, monospace;
+    font-weight: 500;
+    font-size: 10px;
+    color: ghostwhite;
+}
+
+#site_header h1 {
+    grid-column: 2;
+    grid-row: 1;
+    text-align: center;
+    font-size: 3.5rem;
+    line-height: 1.2;
+    -webkit-text-stroke: 2px black;
+    paint-order: stroke fill;
+}
+
+#main_nav {
+    grid-column: 1;
+    grid-row: 2;
+    padding: 15px;
+    border-radius: 15px;
+    background: #a48fd6;
+}
+
+#main_nav ul {
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 30px;
+    list-style: none;
+}
+
+#main_nav a {
+    display: block;
+    padding: 14px 10px 20px;
+    border-left: 2px solid #ff4fa3;
+    border-radius: 15px;
+    background: linear-gradient(to right, #14123a, #5b3fa0);
+    color: #5ee6f2;
+    font-family: "Lucida Console", Monaco, monospace;
+    font-size: 23px;
+    font-variant: small-caps;
+    font-weight: 900;
+    text-decoration: none;
+}
+
+#main_nav a:hover {
+    background: #3b2a6b;
+    transform: scale(1.05);
+}
+
+#main_nav a.current {
+    background: #14123a;
+}
+
+main {
+    grid-column: 2;
+    grid-row: 2;
+    display: grid;
+    align-content: start;
+    gap: 10px;
+    margin-left: 10px;
+    margin-right: 15px;
+}
+
+.section {
+    display: grid;
+    row-gap: 1rem;
+    margin-top: 17px;
+    padding: 1rem;
+    border-left: 2px solid #3fd9e8;
+    border-radius: 10px;
+    background: #f7f4ff;
+    color: #14123a;
+}
+
+.section h2 {
+    font-size: 1.75rem;
+    color: #e0338a;
+}
+
+.section p {
+    font-family: Verdana, Geneva, sans-serif;
+}
+
+figure {
+    display: grid;
+    row-gap: 0.5rem;
+}
+
+.hero_image {
+    width: 80%;
+    justify-self: center;
+}
+
+.team_image {
+    width: 100%;
+    max-width: 480px;
+    justify-self: center;
+    border-radius: 6px;
+}
+
+figcaption {
+    font-family: "Lucida Console", Monaco, monospace;
+    font-size: 0.9rem;
+    font-style: italic;
+    color: #14123a;
+    text-align: center;
+}
+
+#foot {
+    grid-column: 1 / 3;
+    grid-row: 4;
+    padding: 1rem;
+    background: linear-gradient(to left, #5b3fa0, #14123a);
+    color: #5ee6f2;
+    font-size: 0.9rem;
+    text-align: center;
+}
+
+#foot p {
+    font-family: "Lucida Console", Monaco, monospace;
+    font-weight: 500;
+}
+
+.ref_list {
+    display: grid;
+    row-gap: 0.75rem;
+    padding-left: 1.5rem;
+    overflow: auto;
+}
+
+.ref_list li,
+.ref_list a,
+.ref_list cite {
+    font-family: Verdana, Geneva, sans-serif;
+}
+
+.ref_list a {
+    color: #5b3fa0;
+}
