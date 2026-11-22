@@ -47,10 +47,11 @@ header {
   background: #0b1f3a;
 }
 
-/* Header heading: a big white Georgia title on the dark header. */
+/* Header title: large white Georgia text on the deep navy background. */
 header h1 {
   font-family: Georgia, "Times New Roman", serif;
-  font-size: 1.8rem;
+  font-size: 2.2rem;
+  color: #ffffff;
 }
 
 /* Header subtitle: a small gap above it keeps it close to the title. */
@@ -109,7 +110,11 @@ main section {
 main h2,
 .card h3 {
   font-family: Georgia, "Times New Roman", serif;
-  color: #0b1f3a;
+  color: #000000;
+}
+
+main p {
+  color: #555555;
 }
 
 /* Section heading size: larger than the card headings below. */
