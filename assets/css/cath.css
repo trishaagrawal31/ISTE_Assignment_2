@@ -1,8 +1,29 @@
+/*
+   cath.css - styles for the Two-Factor Authentication page (Lesson 2)
+
+   Colors:
+     lightgoldenrodyellow + lightpink   page background and cards
+     cornflowerblue + darkslateblue      header, footer, nav and sidebar
+     slateblue                           nav links, fact boxes, hover
+     midnightblue                        text and heading outline
+     rebeccapurple                       h2 headings, borders
+     #ffb703 (gold-yellow)               page title, links, footer text
+     gold                                fact box text on hover
+     floralwhite + ghostwhite            content sections
+
+   Fonts:
+     Papyrus           default for the whole page
+     Courier New       nav links, footer, paragraphs
+     Comic Sans MS     section text, card titles, sidebar facts
+*/
+
+/* Repetition: the same base font everywhere keeps the page consistent */
 * {
     box-sizing: border-box;
     font-family: Papyrus;
 }
 
+/* Alignment: one grid lines up the nav, main and sidebar in neat columns */
 body {
     display: grid;
     grid-template-columns: 1fr 6fr 1fr;
@@ -12,6 +33,7 @@ body {
     background: linear-gradient(lightgoldenrodyellow,lightpink);
 }
 
+/* Alignment: the header grid lines up the logo, name and title, and the balanced columns keep the title centered */
 header {
     display: grid;
     grid-template-columns: 50px 1fr 2fr 1fr 50px;
@@ -22,26 +44,29 @@ header {
     grid-column: 1 / 4; /* the header expands till the end of the page*/
     grid-row: 1;
     text-align: center;
-    background: linear-gradient(to left, cornflowerblue, darkslateblue);
+    background: linear-gradient(to left, cornflowerblue,darkslateblue);
     font-size: 20px;
 }
 
-header img {
+/* Proximity: the logo sits right next to the site name so they read as one group */
+header img{
     grid-column: 1;
     grid-row: 1 / 3;
 }
 
-.site_name {
+/* Proximity: the site name is close to the logo and tagline so the branding stays together */
+.site_name{
     grid-column: 2;
     grid-row: 1;
     align-self: end;
     text-align: left;
     margin: 0;
-    color: khaki;
+    color: gold;
     font-family: "Comic Sans MS";
 }
 
-.tagline {
+/* Proximity: the tagline is directly under the site name so they belong together */
+.tagline{
     grid-column: 2;
     grid-row: 2;
     align-self: start;
@@ -51,8 +76,8 @@ header img {
     color: ghostwhite;
 }
 
-
-header h1 {
+/* Contrast: the yellow title with a dark outline stands out on the blue header */
+header h1{
     grid-column: 3;
     grid-row: 1 / 3;
     margin: 0;
@@ -62,6 +87,8 @@ header h1 {
     paint-order: stroke fill;
 }
 
+
+/* Proximity: all the links are grouped in one box so they read as the menu */
 nav {
     font-variant: small-caps;
     font-weight: 900;
@@ -75,6 +102,7 @@ nav {
     background: cornflowerblue;
 }
 
+/* Repetition: every link has the same shape, color and font so they look like a set */
 nav a{
     border-left: solid 2px rebeccapurple;
     background: linear-gradient(to right,slateblue,cornflowerblue);
@@ -86,11 +114,13 @@ nav a{
     text-decoration: none;
 }
 
+/* Contrast: the darker color and bigger size show which link you're on */
 nav a:hover{
     background: slateblue;
     transform: scale(1.05);
 }
 
+/* Alignment: the sections stack in one column with even gaps */
 main {
     grid-column: 2;
     grid-row: 2;
@@ -99,6 +129,7 @@ main {
     margin-left: 10px;
 }
 
+/* Repetition: every section is the same white rounded box with a yellow border */
 .section{
     border-radius: 10px;
     background: floralwhite;
@@ -108,15 +139,18 @@ main {
     margin-top: 17px;
 }
 
+/* Contrast: a small color change shows which section you're on */
 .section:hover{
     background: ghostwhite;
 }
 
+/* Repetition: all the lesson text uses the same font so it reads consistently */
 .section p{
     font-family: "Comic Sans MS";
     font-weight: 20px;
 }
 
+/* Proximity: all the quick facts are grouped together in one sidebar box */
 aside {
     grid-column: 3;
     grid-row: 2;
@@ -129,12 +163,15 @@ aside {
     gap: 4px;
 }
 
+/* Contrast: the dark blue heading stands out from the yellow facts */
 aside h3{
     grid-row-start: 1;
     grid-column-start: 2;
     color: midnightblue;
     font-weight: 600px;
 }
+
+/* Proximity: the bulb sits right next to the heading so they read as one title */
 aside img{
     width: 40px;
     height: 40px;
@@ -142,6 +179,7 @@ aside img{
     margin-left: 8px;
 }
 
+/* Repetition: each fact uses the same box style as the nav links, which ties the sidebar to the nav */
 aside p{
     color: #ffb703;
     border-left: solid 2px rebeccapurple;
@@ -158,12 +196,14 @@ aside p{
     font-family: "Comic Sans MS";
 }
 
+/* Contrast: gold text on a darker box highlights the fact you're reading */
 aside p:hover{
     background: slateblue;
     color: gold;
     transform: scale(1.05);
 }
 
+/* Repetition: the footer uses the same gradient as the header so the top and bottom match */
 footer {
     grid-column: 1 / 4;
     grid-row: 4;
@@ -173,11 +213,13 @@ footer {
     font-family: "Courier New";
 }
 
+/* Alignment: the cards line up in a row of equal columns */
 .cards{
     display: grid;
-    repeat(auto-fit, minmax(200px, 1fr));grid-template-columns: 1fr 1fr 1fr 1fr;
+repeat(auto-fit, minmax(200px, 1fr));grid-template-columns: 1fr 1fr 1fr 1fr;
 }
 
+/* Repetition: every card has the same border, shape and gradient */
 .card{
     display: grid;
     grid-template-columns: 50px 1fr 1fr;
@@ -191,10 +233,12 @@ footer {
     background: linear-gradient(lightgoldenrodyellow,lightpink);
 }
 
+/* Contrast: the card grows on hover so it stands out from the others */
 .card:hover{
     transform: scale(1.05);
 }
 
+/* Contrast: a white box behind the tip text makes it stand out from the pink card */
 .card p{
     font-size: 15px;
     border-radius: 10px;
@@ -202,43 +246,53 @@ footer {
     background: floralwhite;
 }
 
+/* Repetition: paragraphs use the same font across the page */
 p{
     font-family: "Courier New";
     font-weight: 500;
 }
 
+/* Repetition: all the icons are the same size */
 img{
     grid-row: 1/1;
     width: 50px;
     height: 50px;
 }
-h4{
+
+/* Alignment: in every card the title lines up right beside the icon */
+.card h3{
     grid-column: 2/4;
     font-family: "Comic Sans MS";
     font-size: 17px;
     color: midnightblue;
 }
+
+/* Alignment: the tip text lines up under the icon and title */
 .cards p{
     grid-column: 1/4;
     grid-row: 2/4;
     margin-left: 5px;
 }
 
+/* Contrast: purple headings stand out from the dark blue body text */
 h2{
     margin-left: 5px;
     color: rebeccapurple;
 }
 
+/* Repetition: all the headings use bold small caps */
 h1,h2,h3,h4{
     font-variant: small-caps;
     font-weight: 800;
 }
 
+/* Contrast: the big video stands out as the main visual on the page */
 .yt_video iframe{
     width: 650px;
     height: 400px;
 }
 
+/* Alignment: the video gets its own row below the text */
 .yt_video{
     grid-row-start: 5;
 }
