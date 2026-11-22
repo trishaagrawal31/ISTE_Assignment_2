@@ -27,7 +27,7 @@ body {
   grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
   padding: 15px 20px;
   border-radius: 15px;
-  background-color: rgba(255, 255, 255, 0.9);
+  background: linear-gradient(to right, hotpink 0%, white 80%);
   align-items: center;
   justify-items: center;
   box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.2); /* shadow */
@@ -41,7 +41,7 @@ body {
   grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
   align-items: center;
   justify-items: center;
-  background: rgba(255, 255, 255, 0.9);
+  background: white;
   border-radius: 15px;
   padding: 20px;
   box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.2);
@@ -68,7 +68,7 @@ body {
   grid-template-rows: auto auto;
   gap: 5px;
   border-radius: 15px;
-  background-color: rgba(255, 255, 255, 0.9);
+  background-color: white;
   border-top: 4px solid hotpink;
   box-shadow: 6px 6px 0px rgba(0, 0, 0, 0.2);
 }
@@ -129,7 +129,7 @@ body {
   align-items: center;
   justify-items: center;
   border-radius: 15px;
-  background-color: rgba(255, 255, 255, 0.9);
+  background-color: white;
   margin-bottom: auto;
   padding: 15px;
   box-shadow: 6px 6px 0px rgba(0, 0, 0, 0.2);
@@ -151,7 +151,7 @@ body {
   grid-column: span 2;
   grid-row: 4;
   border-radius: 15px;
-  background-color: rgba(255, 255, 255, 0.9);
+  background-color: white;
   align-items: center;
   justify-items: center;
   padding: 15px;
