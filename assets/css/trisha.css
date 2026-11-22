@@ -6,6 +6,8 @@
     #12b5a6  bright teal - navigation hover and footer link
     #eef3f8  pale blue   - page and card backgrounds
     #ffffff  white       - content panels
+    #173552  slate blue  - navigation buttons
+    #244563  blue        - navigation button hover
     #fff4d6  warm cream  - quick tip panel
 
   Fonts: Georgia (headings), Verdana (body text)
@@ -73,19 +75,21 @@ nav {
   background: #0b1f3a;
 }
 
-/* Nav links: white text on navy, padded so they are easy to click. */
+/* Nav links: colored backgrounds and teal edges make these look clickable. */
 nav a {
   display: block;
   padding: 10px 12px;
+  border-left: 3px solid #12b5a6;
   border-radius: 8px;
+  background: #173552;
   color: #ffffff;
   font-weight: 600;
+  text-decoration: none;
 }
 
-/* Nav hover: the link turns teal with navy text so you can see where you point. */
+/* Nav hover: a slight shift in blue highlights the selected link. */
 nav a:hover {
-  background: #12b5a6;
-  color: #0b1f3a;
+  background: #244563;
 }
 
 /* Main: sits in column 2 of row 2 (right of the nav). It is a grid too,
