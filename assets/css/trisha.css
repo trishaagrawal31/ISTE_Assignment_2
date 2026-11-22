@@ -1,8 +1,4 @@
-/*
-  Name: Trisha Agrawal   Student ID: 753005593   Team #: 1
-
-
-*/
+/* Name: Trisha Agrawal   Student ID: 753005593   Team #: 1 */
 
 * {
   box-sizing: border-box;
@@ -123,6 +119,7 @@ h2 {
 .card-image {
   display: block;
   width: 100%;
+  height: auto;
 }
 
 .card-copy,
