@@ -1,15 +1,4 @@
-/*! HTML5 Boilerplate v9.0.1 | MIT License | https://html5boilerplate.com/ */
-
-/* main.css 3.0.0 | MIT License | https://github.com/h5bp/main.css#readme */
-/*
- * What follows is the result of much research on cross-browser styling.
- * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
- * Kroc Camen, and the H5BP dev community and team.
- */
-
-/* ==========================================================================
-   Base styles: opinionated defaults
-   ========================================================================== */
+/*   Deekshita Imandi - 750009525 */
 
 html {
   color: #222;
@@ -23,44 +12,52 @@ body {
   grid-template-rows: auto auto auto auto;
   gap: 20px;
   min-height: 100vh;
-  box-sizing: border-box; /*padding wont cause scrolling*/
-
-  /* margin:0;  yes or no?? */
-  /*background styling*/
-  background: rebeccapurple;
-
+  box-sizing: border-box;
+  background: lightskyblue;
   font-family: 'Fredoka', sans-serif;
-  font-weight: 700; /* Makes it thick and chunky */
+  font-weight: 700;
   color: black;
-}
-
-.header{
-  grid-column: span 2;
-  grid-row: 1;
-
-  /*separate grid inside*/
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-  border: 2px solid blue;
-  padding: 10px;
-  border-radius: 15px;
-  background-color: rgba(255, 255, 255, 0.85); /* ADDED */
-}
-
-.navbar{
-  grid-column: span 2;
-  grid-row: 2;
-  border: 2px solid green;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-  align-items: center;
-  justify-items: center; /* change to make it evenly spaced*/
-  /*padding: 0;*/
-  background:rgba(255, 255, 255, 0.85);
-  border-radius: 15px;
   padding: 20px;
 }
 
+.header {
+  grid-column: span 2;
+  grid-row: 1;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  padding: 15px 20px;
+  border-radius: 15px;
+  background-color: rgba(255, 255, 255, 0.9);
+  align-items: center;
+  justify-items: center;
+  box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.2); /* shadow */
+  border-top: 4px solid hotpink;
+}
+
+.navbar {
+  grid-column: span 2;
+  grid-row: 2;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  align-items: center;
+  justify-items: center;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.2);
+  border-top: 4px solid hotpink;
+}
+
+.navbar a {
+  color: black;
+  text-decoration: none; /*changes to wavy on hover*/
+  transition: color 0.2s ease;
+}
+
+.navbar a:hover {
+  color: hotpink;
+  text-decoration: underline wavy;
+}
 
 .main {
   padding: 10px;
@@ -70,7 +67,9 @@ body {
   grid-template-rows: auto auto;
   gap: 5px;
   border-radius: 15px;
-  background-color: rgba(255, 255, 255, 0.85); /* ADDED */
+  background-color: rgba(255, 255, 255, 0.9);
+  border-top: 4px solid hotpink;
+  box-shadow: 6px 6px 0px rgba(0, 0, 0, 0.2);
 }
 
 #content {
@@ -79,74 +78,83 @@ body {
   padding: 20px;
 }
 
-.cards{
+.cards {
   grid-row: 2;
   display: grid;
   grid-template-columns: repeat(2, minmax(200px, 1fr));
   gap: 18px;
-  /*grid-template-rows: 1fr 2fr;*/
   border-radius: 15px;
 }
-.singleCard{
+
+.singleCard {
   display: grid;
   grid-template-columns: 200px 1fr;
-  border: 2px solid black;
-  padding: 10px;
+  border: 2px dotted black;
+  padding: 15px;
   gap: 10px;
   margin: 18px;
   align-items: center;
   justify-items: center;
-  background-color: rgba(255, 255, 255, 0.85);
+  background-color: oldlace;
   border-radius: 15px;
+  box-shadow: 4px 4px 0px hotpink;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
+.singleCard:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 6px 6px 0px hotpink;
+}
 
-.cardImg img{
-  width: 100%; /*fills witdh*/
-  max-width: 100%; /*stops overflow*/
+.cardImg img {
+  width: 100%;
+  max-width: 100%;
   height: auto;
-  border-radius: 0; /* Ensures images stay square */
+  border-radius: 0;
 }
 
-.sidebar{
+.sidebar {
   grid-column: 2;
   grid-row: 3;
-  border: 2px solid orange;
-
   display: grid;
   grid-template-rows: 0.5fr 2fr 2fr 2fr;
   gap: 10px;
   align-items: center;
   justify-items: center;
   border-radius: 15px;
-  background-color: rgba(255, 255, 255, 0.85); /* ADDED */
+  background-color: rgba(255, 255, 255, 0.9);
   margin-bottom: auto;
+  padding: 15px;
+  box-shadow: 6px 6px 0px rgba(0, 0, 0, 0.2);
+  border-top: 4px solid hotpink;
 }
 
-.video{
-  width: 90%;
-  height: 300px;
+.video {
+  width: 95%;
+  height: 250px;
   border: none;
   margin: 10px;
-  border-radius: 5px;
+  border-radius: 10px;
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
 }
 
-
-.footer{
+.footer {
   grid-column: span 2;
   grid-row: 4;
-  border: 2px solid brown;
   border-radius: 15px;
-  background-color: rgba(255, 255, 255, 0.85); /* ADDED */
+  background-color: rgba(255, 255, 255, 0.9);
+  align-items: center;
+  justify-items: center;
+  padding: 15px;
+  text-align: center;
+  box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.2);
+  border-top: 4px solid hotpink;
 }
-
-/*.header, .navbar, .main, .sidebar, .footer {
-  border: 1px solid black;
-}*/
-
 
 h1 {
   font-size: 2.5rem;
+  color: rebeccapurple;
+  text-shadow: 2px 2px 0px hotpink;
 }
 
 h2 {
@@ -159,6 +167,7 @@ h2 {
 
 .singleCard h2 {
   font-size: 1.4rem;
+  color: #6a0dad;
 }
 
 .singleCard p {
